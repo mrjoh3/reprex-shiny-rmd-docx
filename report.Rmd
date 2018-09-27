@@ -1,0 +1,22 @@
+---
+title: "Photograph Log"
+output:
+  word_document:
+    reference_docx: photo_log_template.docx
+params:
+  organisation: NA
+  photographer: NA
+  df: NA
+---
+
+### Photograph Log: `r params$organisation`
+### Photographer: `r params$photographer`
+
+```{r, echo=FALSE, warning=FALSE}
+
+library(knitr)
+
+knitr::kable(params$df)
+
+```
+
